@@ -1,0 +1,90 @@
+.board-container {
+    display: grid;
+    border: 2px solid #212020;
+    justify-content: center;
+    background-color: #bdbdbd;
+    box-shadow: inset 0.2em 0.2em 0 0 rgb(52, 51, 51), inset -0.2em -0.2em 0 0 rgb(213, 201, 201);
+
+    align-items: center;
+}
+
+.cell {
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #090909;
+    background-color: #bdbdbd;
+    text-align: center;
+    line-height: 0;
+    box-shadow: inset 0.15em 0.15em 0 0 #f5ecf4, inset -0.15em -0.15em 0 0 #42474b;
+    &:not(.revealed):hover {
+        background-color: #bdbdbd;
+        box-shadow: none;
+    }
+
+}
+.cell:hover{
+
+
+}
+.cell.revealed {
+    text-align: center;
+    background-color: grey;
+    vertical-align:middle;
+    box-shadow: none;
+    font-size: 1.5rem;
+    color:blue;
+    font-family: "minesweep-block",monospace;
+
+
+}
+
+.cell.bomb{
+    background-color: red;
+}
+.display-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.display {
+    display: flex;
+    font-family: "digitalDisplay", monospace;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: black;
+    color: rgba(255, 0, 0, 0.54);
+    font-size: 2rem;
+    padding: 3px;
+}
+.smiley{
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;
+    font-size: 1.5rem;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    background-color: #c3c7cb;
+    border: 2px solid #ffffff;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    &:hover{
+        background-color: #5b5b5b;
+    }
+}
+
+.game-container {
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #000;
+    background-color: #c0c0c0;
+    font-family: 'Arial', sans-serif;
+    z-index: 5;
+    user-select: none; /* Prevent text selection */
+    padding: 5px;
+}
